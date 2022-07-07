@@ -1,0 +1,105 @@
+### Create User
+POST http://localhost:8001/hsbc/User
+Content-Type: application/json
+
+{
+  "username": "tom",
+  "password": "hardy"
+}
+
+<> 2022-07-07T130554.200.txt
+<> 2022-07-07T130411.200.txt
+<> 2022-07-07T125953.200.txt
+<> 2022-07-07T125405.200.txt
+<> 2022-07-07T124704.200.txt
+<> 2022-07-07T124323.200.txt
+<> 2022-07-07T124156.200.txt
+<> 2022-07-07T123728.200.txt
+<> 2022-07-07T123612.200.txt
+
+### Delete User
+DELETE http://localhost:8001/hsbc/User?username=tom
+
+### Create Role
+POST http://localhost:8001/hsbc/Role
+Content-Type: application/json
+
+{
+  "name": "admin"
+}
+
+<> 2022-07-07T124328.200.txt
+<> 2022-07-07T123841.400.txt
+<> 2022-07-07T123837.200.txt
+<> 2022-07-07T123800.200.txt
+
+### DELETE role
+DELETE http://localhost:8001/hsbc/Role?name=admin
+
+### ADD role to user
+POST http://localhost:8001/hsbc/AddUserRole
+Content-Type: application/json
+
+{
+  "username": "tom",
+  "roleName": "admin"
+}
+
+<> 2022-07-07T130813.200.txt
+<> 2022-07-07T130725.200.txt
+<> 2022-07-07T124412.200.txt
+<> 2022-07-07T124353.200.txt
+
+### Authenticate
+POST http://localhost:8001/hsbc/Authenticate
+Content-Type: application/json
+
+{
+  "username": "tom",
+  "password": "hardy"
+}
+
+<> 2022-07-07T130730.200.txt
+<> 2022-07-07T130558.200.txt
+<> 2022-07-07T130527.200.txt
+<> 2022-07-07T130419.200.txt
+<> 2022-07-07T130221.200.txt
+<> 2022-07-07T130210.200.txt
+<> 2022-07-07T130138.200.txt
+<> 2022-07-07T125958.200.txt
+<> 2022-07-07T125415.200.txt
+
+### Invalidate
+POST http://localhost:8001/hsbc/Invalidate
+Content-Type: application/json
+
+{
+  "token": "pLlglQXc"
+}
+
+<> 2022-07-07T130214.400.txt
+<> 2022-07-07T130205.400.txt
+<> 2022-07-07T130125.400.txt
+<> 2022-07-07T125625.400.txt
+<> 2022-07-07T125511.400.txt
+
+### Check role
+PUT http://localhost:8001/hsbc/CheckRole
+Content-Type: application/json
+
+{
+  "authToken": "CIUpla0W",
+  "roleName": "developer"
+}
+
+<> 2022-07-07T130738.200.txt
+
+### All roles
+PUT http://localhost:8001/hsbc/AllRoles
+Content-Type: application/json
+
+{
+  "authToken": "CIUpla0W"
+}
+
+<> 2022-07-07T130819.200.txt
